@@ -1,0 +1,292 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- main a-frame library -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+    <!-- physics library -->
+    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+
+
+    <!-- extras library -->
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene loading-screen="dotsColor: red; backgroundColor: black" cursor="rayOrigin: mouse">
+      <a-assets>
+        <a-asset-item preload="auto" id="phone-obj" src="models/iphone12.obj"></a-asset-item>
+        <a-asset-item preload="auto" id="phone-mtl" src="models/iphone12.mtl"></a-asset-item>
+        <img id="map" src="images/map.jpeg">
+        <img id="warn" src="images/mark.jpg">
+        <audio id="siri1" preload="auto" crossorigin="anonymous" src="audio/1.mp3"></audio>
+        <audio id="siri2" preload="auto" crossorigin="anonymous" src="audio/2.MP4.mp3"></audio>
+        <audio id="siri3" preload="auto" crossorigin="anonymous" src="audio/3.MP4.mp3"></audio>
+        <audio id="siri4" preload="auto" crossorigin="anonymous" src="audio/4.mp3"></audio>
+        <audio id="siri5" preload="auto" crossorigin="anonymous" src="audio/5.mp3"></audio>
+        <audio id="siri6" preload="auto" crossorigin="anonymous" src="audio/6.mp3"></audio>
+        <audio id="siri7" preload="auto" crossorigin="anonymous" src="audio/7.mp3"></audio>
+        <audio id="siri8" preload="auto" crossorigin="anonymous" src="audio/8.MP4.mp3"></audio>
+        <audio id="siri10" preload="auto" crossorigin="anonymous" src="audio/10.mp3"></audio>
+        <audio id="siri22" preload="auto" crossorigin="anonymous" src="audio/10.mp3"></audio>
+      </a-assets>
+
+      <a-entity id="cameraRig" movement-controls  rotation="0 0 0" position="0 0 .5">
+              <a-entity camera look-controls position="0 1.6 0" >
+              </a-entity>
+      </a-entity>
+
+
+      <a-entity
+      obj-model="obj: #phone-obj; mtl: #phone-mtl"
+      position="0.08326 -0.03759 -0.79081" rotation="0 -50 0" scale="0.6 0.6 0.6"
+      sound="src: audio/1.mp3; on: click">
+      </a-entity>
+
+
+    <a-entity
+      obj-model="obj: #phone-obj; mtl: #phone-mtl"
+      position="-1.844 0.113 -1.560"
+      rotation="0 138.73 0"
+      scale="0.5 0.5 0.5"
+      sound="src: #siri2; on: click">
+    </a-entity>
+
+    <a-entity
+      obj-model="obj: #phone-obj; mtl: #phone-mtl"
+      position="-2.041 2 -3.460"
+      rotation="0 138.73 0"
+      scale="0.7 0.7 0.7"
+      sound="src: #siri3; on: click">
+    </a-entity>
+
+    <a-entity
+      obj-model="obj: #phone-obj; mtl: #phone-mtl"
+      position="-3.414.822 -4.496 -4.496"
+      rotation="0 138.73 0"
+      scale="2 2 2"
+      sound="src: #siri6; on: click">
+    </a-entity>
+
+    <a-entity
+      obj-model="obj: #phone-obj; mtl: #phone-mtl"
+      position="-7.542 5 -14.583"
+      rotation="0 138.73 0"
+      scale="1.5 1.5 1.5"
+      sound="src: #siri7; on: click">
+    </a-entity>
+
+    <a-entity
+    obj-model="obj: #phone-obj; mtl: #phone-mtl"
+    position="19.81248 -10.74774 5.30375" rotation="0 20 0" scale="4 4 4"
+    sound="src: #siri4; on: click">
+    </a-entity>
+
+    <a-entity
+    position="-1.162 1.21147 0.67736" rotation="0 300 0" scale="0.55 0.55 0.55"
+    sound="src: #siri5; on: click">
+    </a-entity>
+
+    <a-entity
+    obj-model="obj: #phone-obj; mtl: #phone-mtl"
+    position="-1.32 2.496 2.237"
+    rotation="0 220.000 0"
+    scale="0.5 0.5 0.5"
+    sound="src: #siri10; on: click">
+    </a-entity>
+
+    <a-entity
+    obj-model="obj: #phone-obj; mtl: #phone-mtl"
+    position="-4 0.805 -0.912"
+    rotation="0 150
+     0"
+    scale="0.5 0.5 0.5"
+    sound="src: #siri22; on: click">
+    </a-entity>
+
+    <a-entity
+    obj-model="obj: #phone-obj; mtl: #phone-mtl"
+    position="31.41155 -18.13465 26.27962" rotation="0 -20 0" scale="22 22 22">
+
+    </a-entity>
+
+    <!-- \<a-entity
+    obj-model="obj: #phone-obj; mtl: #phone-mtl"
+    position="10 20 10"
+    rotation="0 150 0"
+    scale="4 4 4">
+    </a-entity>
+
+    <a-entity
+    obj-model="obj: #phone-obj; mtl: #phone-mtl"
+    position="30 -100 20"
+    rotation="0 140 0"
+    scale="5 5 5"
+    </a-entity>
+
+    <a-entity
+    obj-model="obj: #phone-obj; mtl: #phone-mtl"
+    position="33 20 -55"
+    rotation="0 140 0"
+    scale="10 10 10">
+    </a-entity>
+
+    <a-entity
+    obj-model="obj: #phone-obj; mtl: #phone-mtl"
+    position="-5 -3 -2"
+    rotation="0 100 0"
+    scale="3 3 3"
+    event-set__enter="_event: mouseenter; _target: #Text; visible: true"
+    event-set__leave="_event: mouseleave; _target: #Text; visible: false">
+<a-text id="Text" value="help you? What are you talking about?" align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+  geometry="primitive: plane; width: 1.75" material="color: #333"></a-text>
+    </a-entity>
+
+    <a-entity
+    obj-model="obj: #phone-obj; mtl: #phone-mtl"
+    position="-2 -4 4"
+    rotation="0 200.000 0"
+    scale="2 2 2"
+    event-set__enter="_event: mouseenter; _target: #Text1; visible: true"
+    event-set__leave="_event: mouseleave; _target: #Text1; visible: false">
+<a-text id="Text1" value="what can I help you with ?" align="center" color="#FFF" visible="" position="1.11644 1.84202 0.95635" geometry="primitive: plane; width: 1.75" material="color: #333" text="" scale="2 2 2">></a-text>
+    </a-entity>
+
+    <a-entity
+    obj-model="obj: #phone-obj; mtl: #phone-mtl"
+    position="-12.688 -8.241 -7.997"
+    rotation="0 110.730 0"
+    scale="5 5 5">
+    </a-entity>
+
+    <a-entity
+    obj-model="obj: #phone-obj; mtl: #phone-mtl"
+    position="-14 -1.203 7"
+    rotation="0 170 0"
+    scale="6 6 6"
+    event-set__enter="_event: mouseenter; _target: #Text1; visible: true"
+    event-set__leave="_event: mouseleave; _target: #Text1; visible: false">
+<a-text id="Text1" value="what can I help you with ?" align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+  geometry="primitive: plane; width: 1.75" material="color: #333"></a-text>
+    </a-entity>
+
+    <a-entity
+    obj-model="obj: #phone-obj; mtl: #phone-mtl"
+    position="40.64653 -18.75687 55" rotation="" scale="5 5 5"
+    position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"
+            event-set__enter="_event: mouseenter; _target: #Text2; visible: true"
+            event-set__leave="_event: mouseleave; _target: #Text2; visible: false">
+  <a-text id="Text2" value="I'm not sure I understand ! Sorry! " align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+          geometry="primitive: plane; width: 1.75" material="color: #333"></a-text>
+    </a-entity>
+
+    <a-entity
+    obj-model="obj: #phone-obj; mtl: #phone-mtl"
+    position="-2.159 5 -9"
+    rotation="0 105.950 0"
+    scale="1 1 1"
+    position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"
+            event-set__enter="_event: mouseenter; _target: #Text3; visible: true"
+            event-set__leave="_event: mouseleave; _target: #Text3; visible: false">
+  <a-text id="Text3" value="some things you can ask me to do, but I don 't want to do it. The answer is,'Well, I'm going to do it" align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+          geometry="primitive: plane; width: 1.75" material="color: #333"></a-text>
+    </a-entity>
+
+    <a-entity
+    obj-model="obj: #phone-obj; mtl: #phone-mtl"
+    position="-92.530 -33.666 -1.643"
+    rotation="0 180.000 0"
+    scale="6 6 6"
+    position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"
+            event-set__enter="_event: mouseenter; _target: #Text4; visible: true"
+            event-set__leave="_event: mouseleave; _target: #Text4; visible: false">
+  <a-text id="Text4" value="Hello there is nobody looking for you. I just asked for your name." align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+          geometry="primitive: plane; width: 1.75" material="color: #333"></a-text>
+    </a-entity>
+
+    <a-entity
+    obj-model="obj: #phone-obj; mtl: #phone-mtl"
+    position="23.9744 -14.40627 -17.6109" rotation="" scale="4 4 4"
+    position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"
+            event-set__enter="_event: mouseenter; _target: #Text5; visible: true"
+            event-set__leave="_event: mouseleave; _target: #Text5; visible: false">
+  <a-text id="Text5" value="help you to make it better." align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+          geometry="primitive: plane; width: 1.75" material="color: #333"></a-text>
+    </a-entity>
+
+    <a-entity
+    obj-model="obj: #phone-obj; mtl: #phone-mtl"
+    position="40 -55 -20"
+    rotation="0 167 0"
+    scale="6 6 6">
+    </a-entity>
+ -->
+
+    <a-entity
+      geometry="primitive: sphere;"
+      radius = "1;"
+      position="0 -0.77 -1.0;"
+      scale="2 2 2"
+      rotation="-17.86 -15.35 0"
+      material="src: #map"
+      sound="src: #siri5; autoplay: true">
+    </a-entity>
+
+    <a-entity
+    text-geometry="value: Hey Siri"
+    position="-1.327 2.252 -2"
+     material="color: #111"
+    align="center"
+    scale="1 1 1"
+    sound="src: #siri4; autoplay: true">
+    </a-entity>
+
+    <!-- <a-entity
+    text-geometry="value: I'm not sure I understand"
+    position="-5.249 3.186 -1.422"
+    rotation="0 35.000 0"
+     material="color: #111"
+    align="center"
+    scale="0.4 0.4 0.4">
+    </a-entity>
+
+    <a-entity
+    id="text"
+    text-geometry="value: some things you can ask me"
+    position="0.065 3.239 -2.191"
+    rotation="0 0 0"
+     material="color: #111"
+    align="center"
+    scale="0.3 0.3 0.3">
+  </a-entity> -->
+
+    <!-- <a-entity text-geometry="value: Hello" position="0.44121 0.853 0.676" rotation="0 179.26 0" material="color: #111"
+    align="center" scale="2 2 2">
+      </a-entity>
+
+    <a-entity text-geometry="value: there" position="-3.08594 0.853 0.676" rotation="0 110 0" material="color: #111" align="center" scale="2 2 2">
+    </a-entity>
+
+    <a-entity
+    id="text"
+    text-geometry="value: what can I help you with"
+    position="0 0 -1.363"
+    rotation="0 250.000 0"
+     material="color: #111"
+    align="center"
+    scale="1 1 1 ">
+    </a-entity> -->
+
+
+
+
+
+    <a-videosphere src="#warn"></a-videosphere>
+    <!--<a-sky Src="#warn"></a-sky>-->
+
+    </a-scene>
+  </body>
+</html>
